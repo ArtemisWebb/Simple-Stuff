@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.canvas.Canvas?>
+<BorderPane prefHeight="400.0" prefWidth="600"
+            xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="Paint.Controller">
+    <top>
+        <VBox>
+            <MenuBar>
+                <Menu text="File">
+                    <MenuItem text ="New Canvas" onAction="#onNewCanvas"/>
+                    <MenuItem text ="Save as Profile Image" onAction="#onSave"/>
+                    <MenuItem text ="Exit without Saving" onAction="#onExit"/>
+                </Menu>
+            </MenuBar>
+
+            <ToolBar>
+                <HBox alignment="CENTER" spacing="5">
+                    <TextField fx:id="brushSize" text="18"/>
+                    <ColorPicker fx:id="colorPicker"/>
+                    <CheckBox fx:id="eraser" text="Eraser"/>
+                </HBox>
+            </ToolBar>
+        </VBox>
+    </top>
+
+    <center>
+        <Canvas fx:id="canvas" width="600" height="600" />
+    </center>
+</BorderPane>
+
